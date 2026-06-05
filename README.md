@@ -34,7 +34,7 @@ The merged dataset contains approximately 1,505,011 reviews and business records
 
 
   <iframe
-    src="./assets/dist-of-restaurant-review-ratings (1).html"
+    src="./assets/dist-of-restaurant-review-ratings (2).html"
     width="900"
     height="600"
     frameborder="0">
@@ -48,14 +48,14 @@ The merged dataset contains approximately 1,505,011 reviews and business records
   </iframe>
 
   <iframe
-    src="./assets/business-response-rate.html"
+    src="./assets/business-response-rate (1).html"
     width="900"
     height="600"
     frameborder="0">
   </iframe>
 
   <iframe
-    src="./assets/number-of-reviews.html"
+    src="./assets/number-of-reviews (1).html"
     width="900"
     height="600"
     frameborder="0">
@@ -97,7 +97,7 @@ This suggests that the missingness of review text depends on the observed variab
 
 
   <iframe
-    src="./assets/permutation-test.html"
+    src="./assets/permutation-review-length.html"
     width="900"
     height="600"
     frameborder="0">
