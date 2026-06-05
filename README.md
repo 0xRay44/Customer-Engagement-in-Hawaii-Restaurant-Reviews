@@ -65,6 +65,12 @@ The merged dataset contains approximately 1,505,011 reviews and business records
 
 Missingness Analysis
 
+missing_table = pd.DataFrame({
+    "Column": ["resp", "pics", "state", "price", "text", "description", "hours"],
+    "Percent Missing": ["93%", "91%", "59%", "54%", "43%", "27%", "15%"]
+})
+
+print(missing_table.to_markdown(index=False))
 I investigated the missingness of the text column, which contains the written content of a review. Approximately 43% of reviews do not contain review text.
 
 To determine whether this missingness was related to another variable in the dataset, I examined the proportion of missing review text across different rating levels. The results showed that the missingness rate varied substantially by rating. For example, only 27% of 1-star reviews were missing text, compared to roughly 50% of 3-star reviews.
@@ -148,6 +154,11 @@ The final Decision Tree Classifier achieved an F1-score of 0.733, improving upon
 ---
 
 ## Fairness Analysis
+
+| Price Group | F1 Score |
+|----------|----------|
+| Low Price ($, $$) | 0.732 |
+| High Price ($$$, $$$$) | 0.748 |
 
 To evaluate fairness, I compared model performance across restaurant price groups. Restaurants were divided into two groups based on price level: lower-priced restaurants (price levels 1–2) and higher-priced restaurants (price levels 3–4).
 
