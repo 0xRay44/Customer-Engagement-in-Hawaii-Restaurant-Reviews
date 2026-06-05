@@ -190,8 +190,8 @@ The feature importance analysis showed that whether a review contained pictures 
 
 | Price Group | F1 Score |
 |----------|----------|
-| Low Price ($, $$) | 0.732 |
-| High Price ($$$, $$$$) | 0.748 |
+| Lower-Priced Restaurants ($, $$) | 0.732 |
+| Higher-Priced Restaurants ($$$, $$$$) | 0.748 |
 
 To evaluate fairness, I compared model performance across restaurant price groups. Restaurants were divided into two groups based on price level: lower-priced restaurants (price levels 1–2) and higher-priced restaurants (price levels 3–4).
 
