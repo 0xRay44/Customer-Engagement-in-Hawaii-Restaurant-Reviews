@@ -77,6 +77,8 @@ One of the clearest patterns was that lower-rated reviews tended to be longer th
 | description | 27% |
 | hours | 15% |
 
+<br>
+
 | Rating | Missing Text Rate |
 |----------|----------|
 | 1 | 27% |
@@ -94,6 +96,8 @@ This suggests that the missingness of review text depends on the observed variab
 ---
 
 ## Hypothesis Testing
+
+<br>
 
 <iframe
   src="./assets/permutation-review-length.html"
@@ -152,14 +156,33 @@ My baseline model was a Decision Tree Classifier with a maximum depth of 3. The 
 
 To improve the model, I incorporated additional features including `rating`, `num_of_reviews`, and a numerical encoding of restaurant price level. These features were selected because they were plausibly related to customer engagement and review-writing behavior.
 
-The final Decision Tree Classifier achieved an F1-score of 0.733, slightly improving upon the baseline model's F1-score of 0.722. Feature importance analysis showed that the strongest predictor was whether the review contained pictures, followed by the year of the review and the review rating. This suggests that reviews with attached photos are substantially more likely to include written text as well.
+The final Decision Tree Classifier achieved an F1-score of 0.733, slightly improving upon the baseline model's F1-score of 0.722.
 
-<iframe
-  src="./assets/feature-importance.html"
-  width="900"
-  height="600"
-  frameborder="0">
-</iframe>
+The final model used the following features:
+
+| Feature |
+|----------|
+| has_pics |
+| num_categories |
+| year |
+| month |
+| rating |
+| num_of_reviews |
+| price_num |
+
+Feature importance values from the final model are shown below.
+
+| Feature | Importance |
+|----------|----------|
+| has_pics | 0.73 |
+| year | 0.20 |
+| rating | 0.08 |
+| num_categories | 0.00 |
+| month | 0.00 |
+| num_of_reviews | 0.00 |
+| price_num | 0.00 |
+
+The feature importance analysis showed that whether a review contained pictures was by far the strongest predictor of whether the review also contained written text. The year of the review and the review rating contributed some additional predictive power, while the remaining features had little influence on the model's predictions.
 
 ---
 
