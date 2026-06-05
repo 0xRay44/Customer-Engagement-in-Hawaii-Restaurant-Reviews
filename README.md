@@ -65,12 +65,25 @@ The merged dataset contains approximately 1,505,011 reviews and business records
 
 Missingness Analysis
 
-missing_table = pd.DataFrame({
-    "Column": ["resp", "pics", "state", "price", "text", "description", "hours"],
-    "Percent Missing": ["93%", "91%", "59%", "54%", "43%", "27%", "15%"]
-})
+| Column | Percent Missing |
+|----------|----------|
+| resp | 93% |
+| pics | 91% |
+| state | 59% |
+| price | 54% |
+| text | 43% |
+| description | 27% |
+| hours | 15% |
 
-print(missing_table.to_markdown(index=False))
+| Rating | Missing Text Rate |
+|----------|----------|
+| 1 | 27% |
+| 2 | 36% |
+| 3 | 50% |
+| 4 | 48% |
+| 5 | 41% |
+
+
 I investigated the missingness of the text column, which contains the written content of a review. Approximately 43% of reviews do not contain review text.
 
 To determine whether this missingness was related to another variable in the dataset, I examined the proportion of missing review text across different rating levels. The results showed that the missingness rate varied substantially by rating. For example, only 27% of 1-star reviews were missing text, compared to roughly 50% of 3-star reviews.
