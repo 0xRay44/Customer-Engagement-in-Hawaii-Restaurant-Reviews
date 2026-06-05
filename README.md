@@ -75,6 +75,8 @@ Missingness Analysis
 | description | 27% |
 | hours | 15% |
 
+<br>
+
 | Rating | Missing Text Rate |
 |----------|----------|
 | 1 | 27% |
@@ -94,7 +96,7 @@ This suggests that the missingness of review text depends on the observed variab
 ---
 
 ## Hypothesis Testing
-
+<br>
 
   <iframe
     src="./assets/permutation-review-length.html"
