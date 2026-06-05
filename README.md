@@ -28,25 +28,11 @@ This question is interesting because written reviews provide much richer informa
 
 The merged dataset contains approximately 1,505,011 reviews and business records.
 
-  <iframe
-    src="assets/avg-review-length.html"
-    width="900"
-    height="600"
-    frameborder="0">
-  </iframe>
----
-
 ---
 
 ## Cleaning and EDA
 
-<iframe
-  src="assets/dist-of-restaurant-review-ratings.html"
-  width="900"
-  height="600"
-  frameborder="0">
-</iframe>
-
+<iframe src="assets/avg-review-length.html" width="900" height="600" frameborder="0"></iframe>
 
 ## Assessment of Missingness
 
